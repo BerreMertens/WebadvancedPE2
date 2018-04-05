@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Locaties
+Route::get('locatie', 'LocatieController@index');
+Route::post('locatie/create', 'LocatieController@Create');
