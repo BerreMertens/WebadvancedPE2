@@ -20,4 +20,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Locaties
 Route::get('locatie', 'LocatieController@index');
+Route::get('locatie/AlleLocaties', 'LocatieController@showAllLocations');
+Route::get('locatie/{id}', 'LocatieController@showLocation');
 Route::post('locatie/create', 'LocatieController@Create');
