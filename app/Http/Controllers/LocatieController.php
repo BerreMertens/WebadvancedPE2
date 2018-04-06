@@ -16,11 +16,16 @@ class LocatieController extends Controller
     public function showAllLocations()
     {
 
+        $locaties = locatie::all();
+
+        return view('locaties.locaties_lijst', compact('locaties'));
     }
 
-    public function showLocation(Locatie $locatie)
+    public function showLocation($id)
     {
+        $locatie = locatie::find($id);
 
+        return view('locaties.showLocatie', compact('locatie'));
     }
 
     public function create()
@@ -32,7 +37,7 @@ class LocatieController extends Controller
         return view('succes.succes');
     }
 
-    public function modify()
+    public function edit()
     {
 
     }
