@@ -9,8 +9,8 @@
 <body>
 
 <div  style="margin: 15%; margin-left: 35%" class="container">
-    <h1>Succesfully submited</h1>
-    <a href="/">Go back to home</a>
+    <h1>Locatie succesvol aangemaakt!</h1>
+    <a href="/">Ga Terug</a>
 </div>
 
 </body>

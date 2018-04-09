@@ -37,9 +37,9 @@ class LocatieController extends Controller
         return view('succes.succes');
     }
 
-    public function edit()
+    public function edit($id)
     {
-
+        $locatie = locatie::find($id);
     }
 
     public function delete()
