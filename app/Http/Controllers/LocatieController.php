@@ -37,14 +37,25 @@ class LocatieController extends Controller
         return view('succes.succes');
     }
 
-    public function edit($id)
+    public function update($id)
     {
+
         $locatie = locatie::find($id);
+        $locatie -> naam = request('Naam');
+        $locatie > save();
+
+        Session::flash('message', 'Locatie wijzigen gelukt!');
+        return Redirct::to('locatie/AlleLocaties');
+
     }
 
-    public function delete()
+    public function delete($id)
     {
+        $locatie = locatie::find($id);
+        $locatie->delete();
 
+        Session::flash('message', 'Locatie verwijderd!');
+        return Redirect::to('lcatie/AlleLocaties');
     }
 
 }

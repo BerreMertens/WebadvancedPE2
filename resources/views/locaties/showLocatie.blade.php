@@ -10,14 +10,14 @@
 <div class="container">
     <h1 class="title">Locatie wijzigen</h1>
     <hr>
-    <form class="form-horizontal" action="/locatie/create" method="POST">
+    <form class="form-horizontal" action="/locatie/update" method="PUT">
 
         {{ csrf_field() }}
 
         <div class=form-group>
             <label for="Naam" class="col-sm-2 control-label">Naam</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="Naam" name="Naam" placeholder="{{$locatie->naam}}">
+                <input type="text" class="form-control" id="Naam" name="Naam" value="{{ $locatie->naam }}">
             </div>
         </div>
         <div class="form-group">
@@ -25,8 +25,6 @@
                 <button type="submit" class="btn btn-primary">Locatie wijzigen</>
             </div>
         </div>
-
-    </form>
 </div>
 
 </body>

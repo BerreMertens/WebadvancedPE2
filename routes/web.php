@@ -22,4 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('locatie', 'LocatieController@index');
 Route::get('locatie/AlleLocaties', 'LocatieController@showAllLocations');
 Route::get('locatie/{id}', 'LocatieController@showLocation');
-Route::post('locatie/create', 'LocatieController@Create');
+Route::put('locatie/update', 'LocatieController@update');
+Route::post('locatie/create', 'LocatieController@create');
+Route::delete('locatie/{id}/delete', 'LocatieController@delete');

@@ -11,12 +11,22 @@
     <h1 class="title">Lijst van alle locaties</h1>
     <hr>
     <ul>
-        @foreach ($locaties as $locatie)
+        <table>
+            @foreach ($locaties as $locatie)
 
-            <li><a href="/locatie/{{$locatie->id}}"> {{ $locatie->naam }} </a></li>
+                <tr>
+                    <th>{{ $locatie->naam }}</th>
+                    <th></th>
+                    <th></th>
+                    <th><a href="/locatie/{{$locatie->id}}">Wijzigen</a></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><a href="/locatie/{{$locatie->id}}/delete">Verwijderen</a></th>
+                </tr>
 
-        @endforeach
-
+            @endforeach
+        </table>
     </ul>
 </div>
 
