@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Antwoord extends Model
 {
-    protected $fillable = [ 'score', 'commentaar', 'locatieID'];
+    protected $table = 'antwoorden';
+    protected $fillable = [ 'Score', 'Commentaar', 'LocatieId'];
 }

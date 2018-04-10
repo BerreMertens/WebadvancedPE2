@@ -28,7 +28,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <a href="/locatie/AlleLocaties">Terug naar overzicht</a>
+                <a href="/locatie">Terug naar overzicht</a>
             </div>
         </div>
 

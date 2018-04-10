@@ -17,7 +17,7 @@
         <div class=form-group>
             <label for="Naam" class="col-sm-2 control-label">Naam</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="Naam" name="Naam" value="{{ $locatie->naam }}">
+                <input type="text" class="form-control" id="Naam" name="Naam" placeholder="{{ $locatie->naam }}">
             </div>
         </div>
         <div class="form-group">
@@ -27,7 +27,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <a href="/locatie/AlleLocaties">Terug naar overzicht</a>
+                <a href="/locatie">Terug naar overzicht</a>
             </div>
         </div>
 </div>

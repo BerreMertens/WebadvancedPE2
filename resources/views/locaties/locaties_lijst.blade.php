@@ -9,7 +9,7 @@
 
 <div class="container">
     <h1 class="title">Lijst van alle locaties</h1>
-    <a href="/locatie">Nieuwe locatie aanmaken</a>
+    <a href="/locatie/NieuweLocatieAanmaken">Nieuwe locatie aanmaken</a>
     <hr>
     <ul>
         <table>
@@ -19,7 +19,15 @@
                     <th>{{ $locatie->naam }}</th>
                     <th></th>
                     <th></th>
+                    <th></th>
+                    <th></th>
                     <th><a href="/locatie/{{$locatie->id}}">Wijzigen</a></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><a href="/locatie/locatieDetails/{{$locatie->id}}">Antwoorden Bekijken</a></th>
+                    <th></th>
                     <th></th>
                     <th></th>
                     <th></th>

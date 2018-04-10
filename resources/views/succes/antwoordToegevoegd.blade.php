@@ -9,8 +9,8 @@
 <body>
 
 <div  style="margin: 15%; margin-left: 35%" class="container">
-    <h1>Locatie werd verwijderd!</h1>
-    <a href="/locatie">Terug naar overzicht</a>
+    <h1>Antwoord werd toegevoegd!</h1>
+    <a href="/locatie/LocatieLijstGebruiker">Terug naar overzicht</a>
 </div>
 
 </body>
