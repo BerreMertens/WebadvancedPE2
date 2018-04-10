@@ -46,13 +46,13 @@ class LocatieController extends Controller
 
     public function update($id)
     {
-
         $locatie = locatie::find($id);
         $locatie -> naam = request('Naam');
-        $locatie > save();
+        $locatie -> save();
+
 
         return view('succes.wijzigenGelukt');
-        return Redirct::to('locatie');
+
 
     }
 
@@ -64,7 +64,7 @@ class LocatieController extends Controller
         
 
         return view('succes.verwijderenGelukt');
-        return Redirect::to('locatie');
+
     }
 
 }

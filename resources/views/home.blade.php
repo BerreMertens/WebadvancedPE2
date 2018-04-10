@@ -30,8 +30,17 @@
             position: absolute;
             right: 10px;
             top: 18px;
-        }
 
+        }
+        .rechtsboven > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+                       }
         .column {
             float: left;
             width: 25%;
@@ -56,9 +65,9 @@
 </header>
 <div class="rechtsboven">
 
-    <a href="">Home</a>
+    <a href="{{ url('/home') }}">Home</a>
+    <a href="{{url('/locatie')}}}">Locaties</a>
     <a href="">Login</a>
-
 
 </div>
 
