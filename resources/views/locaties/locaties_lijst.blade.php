@@ -9,6 +9,7 @@
 
 <div class="container">
     <h1 class="title">Lijst van alle locaties</h1>
+    <a href="/locatie">Nieuwe locatie aanmaken</a>
     <hr>
     <ul>
         <table>

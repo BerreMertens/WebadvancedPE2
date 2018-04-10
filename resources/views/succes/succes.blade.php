@@ -10,7 +10,7 @@
 
 <div  style="margin: 15%; margin-left: 35%" class="container">
     <h1>Locatie succesvol aangemaakt!</h1>
-    <a href="/">Ga Terug</a>
+    <a href="/locatie/AlleLocaties">Ga Terug</a>
 </div>
 
 </body>
