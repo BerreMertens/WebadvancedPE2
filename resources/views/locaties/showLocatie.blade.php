@@ -25,6 +25,11 @@
                 <button type="submit" class="btn btn-primary">Locatie wijzigen</>
             </div>
         </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <a href="/locatie/AlleLocaties">Terug naar overzicht</a>
+            </div>
+        </div>
 </div>
 
 </body>

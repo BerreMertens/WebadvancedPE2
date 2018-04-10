@@ -23,7 +23,13 @@
                     <th></th>
                     <th></th>
                     <th></th>
-                    <th><a href="/locatie/{{$locatie->id}}/delete">Verwijderen</a></th>
+                    <th>
+                        <form action="{{ route('locatie.delete', $locatie->id) }}"  method="post">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button type="submit">Verwijderen</button>
+                        </form>
+                    </th>
                 </tr>
 
             @endforeach

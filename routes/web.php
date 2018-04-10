@@ -24,4 +24,4 @@ Route::get('locatie/AlleLocaties', 'LocatieController@showAllLocations');
 Route::get('locatie/{id}', 'LocatieController@showLocation');
 Route::put('locatie/update', 'LocatieController@update');
 Route::post('locatie/create', 'LocatieController@create');
-Route::delete('locatie/{id}/delete', 'LocatieController@delete');
+Route::name('locatie.delete')->delete('locatie/{id}', 'LocatieController@delete');
