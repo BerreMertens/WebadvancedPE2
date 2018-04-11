@@ -13,7 +13,7 @@
             height: 100vh;
             margin: 0;
         }
-        content{
+        .content{
             display: flex;
             justify-content: center;
             position: relative;
@@ -42,15 +42,21 @@
             text-transform: uppercase;
                        }
         .column {
-            float: left;
-            width: 25%;
+            float:left;
+            margin-left:5%;
+            margin-right:5%;
+            width: auto;
         }
 
-
+        img{
+            width:33%;
+            height:40%;
+        }
         .row:after {
-            content: "";
+
             display: table;
             clear: both;
+
         }
         </style>
     <title>WebadvancedPE?</title>
@@ -64,34 +70,40 @@
 
 </header>
 <div class="rechtsboven">
-
-    <a href="{{ url('/home') }}">Home</a>
-    <a href="{{url('/locatie')}}}">Locaties</a>
-    <a href="">Login</a>
+    <a href="/home">Home</a>
+    <a href="/locatie">Locaties</a>
+    <a href="/Login">Login</a>
 
 </div>
 
-<content>
+<div class="content">
 
     <div class="row">
         <div class="column">
             <h2>Yoran Nelissen</h2>
-        <img src="../../pictures/pic1.jpg">
+        <img src="{{ url('images/pic1.jpg') }}">
         </div>
         <div class="column">
             <h2>Berre Mertens</h2>
-            <img src="../../pictures/pic2.jpg">
+            <img src="{{ url('images/pic5.jpg') }}">
         </div>
-        <div class="column">
-            <h2>Driss Moris</h2>
-            <img src="../../pictures/pic3.jpg">
+        <div class="row">
+            <div class="column">
+                <h2>Driss Moris</h2>
+                <img src="{{ url('images/pic3.jpg') }}">
+            </div>
+            <div class="column">
+                <h2>Ben Agten</h2>
+                <img src="{{ url('images/pic6.jpg') }}">
+            </div>
+
         </div>
-        <div class="column">
-            <h2>Ben Agten</h2>
-            <img src="../../pictures/pic4.jpg">
-        </div>
+
     </div>
-</content>
+
+
+
+</div>
 
 
 </body>

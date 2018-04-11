@@ -32,3 +32,9 @@ Route::get('locatie/{id}/AntwoordToevoegen', 'AntwoordController@showLocationToA
 Route::get('locatie/locatieDetails/{id}', 'AntwoordController@showLocationAndAnswers');
 Route::post('antwoord/create/{id}', 'AntwoordController@create');
 Route::name('antwoord.delete')->delete('antwoord/{id}', 'AntwoordController@delete');
+
+//login
+//login route naar login form
+Route::get('Login', array('uses' => 'HomeController@showLogin'));
+//route om effectief in te loggen
+Route::post('Login', array('uses' => 'HomeController@doLogin'));

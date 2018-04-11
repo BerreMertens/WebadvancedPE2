@@ -17,7 +17,7 @@
         <div class=form-group>
             <label for="Naam" class="col-sm-2 control-label">Naam</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="Naam" name="Naam" placeholder="{{ $locatie->naam }}">
+                <input type="text" class="form-control" id="Naam" name="Naam" value="{{ $naam }}">
             </div>
         </div>
         <div class="form-group">
