@@ -38,3 +38,5 @@ Route::name('antwoord.delete')->delete('antwoord/{id}', 'AntwoordController@dele
 Route::get('Login', array('uses' => 'HomeController@showLogin'));
 //route om effectief in te loggen
 Route::post('Login', array('uses' => 'HomeController@doLogin'));
+//logout route
+Route::get('logout', array('uses' => 'HomeController@doLogout'));

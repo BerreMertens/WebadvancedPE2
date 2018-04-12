@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <title>Antwoord toevoegen</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 </head>
 
 <body>
+@include('menu')
 <div class="container">
     <h1 class="title">Antwoord toevoegen</h1>
     <hr>
@@ -45,4 +47,5 @@
 
     </form>
 </div>
+@include('footer')
 </body>

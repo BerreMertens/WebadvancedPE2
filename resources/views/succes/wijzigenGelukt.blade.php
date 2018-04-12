@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Succes</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 </head>
 <body>
 
@@ -12,6 +12,6 @@
     <h1>Locatie werd gewijzigd!</h1>
     <a href="/locatie">Terug naar overzicht</a>
 </div>
-
+@include('footer')
 </body>
 </html>

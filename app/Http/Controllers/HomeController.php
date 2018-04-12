@@ -51,12 +51,17 @@ class HomeController extends Controller
             } else {
 
                 // validation not successful, send back to form
-                return Redirect::to();
+                return Redirect::to('/Login');
 
 
             }
 
         }
 
+    }
+    public function doLogout()
+    {
+        Auth::logout(); // log the user out of our application
+        return Redirect::to('home'); // redirect the user to the login screen
     }
 }

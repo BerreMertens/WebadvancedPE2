@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <title>Nieuwe locatie aanmaken</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 </head>
-
+@include('menu')
 <body>
 <div class="container">
     <h1 class="title">Nieuwe locatie aanmaken</h1>
@@ -34,4 +35,5 @@
 
     </form>
 </div>
+@include('footer')
 </body>

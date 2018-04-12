@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 </head>
 <body>
-
+@include('menu')
 <div class="container">
     <h1 class="title">Lijst van alle locaties</h1>
     <a href="/locatie/NieuweLocatieAanmaken">Nieuwe locatie aanmaken</a>
@@ -44,6 +45,6 @@
         </table>
     </ul>
 </div>
-
+@include('footer')
 </body>
 </html>

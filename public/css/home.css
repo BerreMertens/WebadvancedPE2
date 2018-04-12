@@ -1,0 +1,101 @@
+body {
+
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+    font-size: 18px;
+    background-image: url("/images/backgroundImage4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.content {
+    justify-content: center;
+}
+
+header {
+    justify-content: center;
+    display: flex;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.rechtsboven {
+    overflow: hidden;
+    background-color: #EDEEE8;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    border-bottom-color: #636b6f;
+    border-bottom: solid;
+}
+
+.menu {
+    float: right;
+    display: block;
+}
+a{
+
+    color: #636b6f;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.rechtsboven > a:hover {
+    background-color: #636b6f;
+    color: white;
+}
+
+.column {
+    float: left;
+    width: 25%;
+
+}
+
+img {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.row {
+    display: table;
+
+}
+
+.kort {
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+.lang {
+    margin-left: 27%;
+    margin-right: 27%;
+}
+
+.tekst {
+
+    margin-right: 33%;
+    margin-left: 33%;
+}
+
+.footer {
+
+    clear: both;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #636b6f;
+    color: whitesmoke;
+    text-align: center;
+}

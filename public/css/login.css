@@ -1,0 +1,108 @@
+body {
+
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+    font-size: 18px;
+    background-image: url("/images/backgroundImage4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.content {
+    justify-content: center;
+}
+
+header {
+    justify-content: center;
+    display: flex;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.rechtsboven {
+    overflow: hidden;
+    background-color: #EDEEE8;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    border-bottom-color: #636b6f;
+    border-bottom: solid;
+}
+
+.menu {
+    float: right;
+    display: block;
+}
+a{
+
+    color: #636b6f;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.rechtsboven > a:hover {
+    background-color: #636b6f;
+    color: white;
+}
+
+.column {
+    float: left;
+    width: 100%;
+}
+#columnLeft{
+    width:25%;
+}
+
+.row {
+    display: table;
+    width:100%;
+}
+.footer {
+    position: fixed;
+    clear: both;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #636b6f;
+    color: whitesmoke;
+    text-align: center;
+}
+.form-horizontal{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+
+}
+.form-control{
+    margin-bottom:10px;
+    font-size: 20px;
+    color: #636b6f;
+    background: white;
+}
+button{
+
+    border-radius: 28px;
+    color: #636b6f;
+    font-size: 20px;
+    background: #EDEEE8;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-bottom:10px;
+}
+ button:hover{
+    background: #636b6f;
+    color: #EDEEE8;
+    text-decoration: none;
+}
