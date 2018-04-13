@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Locatie;
+use App\Antwoord;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -60,8 +61,8 @@ class LocatieController extends Controller
     {
         $locatie = locatie::find($id);
         $locatie->delete();
-
-        
+        $Antwoord = antwoord::where('locatieId',$id);
+        $Antwoord->delete();
 
         return view('succes.verwijderenGelukt');
 
