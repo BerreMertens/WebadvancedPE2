@@ -36,12 +36,39 @@ class AntwoordController extends Controller
         return view('antwoorden/locatieMetAntwoorden', compact('antwoorden', 'locatie'));
     }
 
+    public function showMyAnswers(){
+        //hier vraag ik ze even allemaal op
+
+        $antwoorden = antwoord::all();
+
+        return view('antwoorden.lijstAntwoorden', compact('antwoorden'));
+    }
+
+    public function showAnswer($id){
+
+        $antwoord = antwoord::find($id);
+
+        return view('antwoorden.antwoordWijzigen', compact('antwoord'));
+    }
+
+    public function update($id)
+    {
+
+        $antwoord = antwoord::find($id);
+        $antwoord -> score = request('Score');
+        $antwoord -> commentaar = request('Commentaar');
+        $antwoord -> save();
+
+        return view('succes.wijzigenGelukt');
+
+
+    }
+
     public function delete($id)
     {
         $antwoord = antwoord::find($id);
         $antwoord->delete();
 
         return view('succes.antwoordVerwijderd');
-        return Redirect::to('locatie');
     }
 }

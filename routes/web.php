@@ -30,6 +30,9 @@ Route::name('locatie.delete')->delete('locatie/{id}', 'LocatieController@delete'
 //Antwoorden
 Route::get('locatie/{id}/AntwoordToevoegen', 'AntwoordController@showLocationToAddAnswer');
 Route::get('locatie/locatieDetails/{id}', 'AntwoordController@showLocationAndAnswers');
+Route::get('antwoord/{id}', 'AntwoordController@showAnswer');
+Route::get('antwoord/lijstAntwoorden', 'AntwoordController@showMyAnswers');
+Route::name('antwoord.update')->put('antwoord/{id}', 'AntwoordController@update');
 Route::post('antwoord/create/{id}', 'AntwoordController@create');
 Route::name('antwoord.delete')->delete('antwoord/{id}', 'AntwoordController@delete');
 
