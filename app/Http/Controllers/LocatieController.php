@@ -30,9 +30,9 @@ class LocatieController extends Controller
 
     public function showLocation($id)
     {
-        $locatie = locatie::find($id)['naam'];
+        $locatie = locatie::find($id);
 
-        return view('locaties.showLocatie', ['naam' => $locatie]);
+        return view('locaties.showLocatie', compact('locatie'));
     }
 
     public function create()
@@ -47,7 +47,9 @@ class LocatieController extends Controller
     public function update($id)
     {
 
-        locatie::where('id',$id)->update(request('Naam')->all());
+        $locatie = locatie::find($id);
+        $locatie -> naam = request('Naam');
+        $locatie -> save();
 
         return view('succes.wijzigenGelukt');
 
