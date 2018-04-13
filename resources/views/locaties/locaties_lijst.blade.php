@@ -51,9 +51,10 @@
 
         <div class="text-center">
             <h1 class="">access denied!</h1>
-            <img class="text-center" src="/images/stop2.svg">
-        </div>
+            <video controls src="/videos/stop3.mp4"></video>
 
+
+       
 
     @endif
 </div>
