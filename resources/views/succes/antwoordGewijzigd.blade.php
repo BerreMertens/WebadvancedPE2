@@ -10,7 +10,7 @@
 @include('menu')
 <div  style="margin: 15%; margin-left: 35%" class="container">
     <h1>Antwoord werd gewijzigd!</h1>
-    <a href="/locatie/LocatieLijstGebruiker">Terug naar overzicht</a>
+    <a href="/antwoord/lijstAntwoorden">Terug naar overzicht</a>
 </div>
 @include('footer')
 </body>

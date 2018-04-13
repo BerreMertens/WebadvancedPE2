@@ -20,7 +20,7 @@
 
         <div class=form-group>
             <div class="col-sm-10">
-                <h3></h3>
+                <h3>{{ $antwoord->naam }}</h3>
             </div>
         </div>
         <div class=form-group>
@@ -42,7 +42,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <a href="/locatie/LocatieLijstGebruiker">Terug naar overzicht</a>
+                <a href="/antwoord/lijstAntwoorden">Terug naar overzicht</a>
             </div>
         </div>
 

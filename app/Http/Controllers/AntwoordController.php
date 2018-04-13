@@ -46,8 +46,15 @@ class AntwoordController extends Controller
 
     public function showAnswer($id){
 
-        $antwoord = antwoord::find($id);
+       /* $antwoord = antwoord::find($id);*/
+       /* $locatie = DB::table('locaties')->where('id', $antwoord->locatieId)->get();*/
+        /*$antwoord = DB::table('antwoord')
+            ->select($antwoord)*/
 
+            $antwoord= DB::table('antwoorden')
+                ->select('score,commentaar,locatieId,naam')
+                ->leftJoin('locaties ','antwoorden.locatieId', '=','locaties.id')
+            ->get();
         return view('antwoorden.antwoordWijzigen', compact('antwoord'));
     }
 
@@ -59,7 +66,7 @@ class AntwoordController extends Controller
         $antwoord -> commentaar = request('Commentaar');
         $antwoord -> save();
 
-        return view('succes.wijzigenGelukt');
+        return view('succes.antwoordGewijzigd');
 
 
     }

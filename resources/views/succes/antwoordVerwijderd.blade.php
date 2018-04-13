@@ -8,9 +8,13 @@
 </head>
 <body>
 @include('menu')
-<div  style="margin: 15%; margin-left: 35%" class="container">
+<div style="margin: 15%; margin-left: 35%" class="container">
     <h1>Antwoord werd verwijderd!</h1>
-    <a href="/locatie">Terug naar overzicht</a>
+    @if(Auth::check())
+        <a href="/locatie">Terug naar overzicht</a>
+    @else
+        <a href="/antwoord/lijstAntwoorden">Terug naar overzicht</a>
+    @endif
 </div>
 @include('footer')
 </body>
