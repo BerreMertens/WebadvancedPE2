@@ -25,6 +25,7 @@
             <th></th>
             <th></th>
         </tr>
+
         @foreach ($antwoorden as $antwoord)
             <tr>
                 <th>{{ $antwoord->score }}</th>

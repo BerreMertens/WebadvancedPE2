@@ -9,11 +9,9 @@
             @if(Auth::check())
                 <li ><a href="/home">Home</a></li>
                 <li><a  href="/locatie/LocatieLijstGebruiker">Locaties</a></li>
+                <li ><a href="/">mijn antwoorden</a></li>
                 <li><a href="/locatie">{{Auth::user()->name}}</a></li>
                 <li><a href="{{url('logout')}}">Log Out</a></li>
-
-
-
             @else
                 <li ><a href="/home">Home</a></li>
                 <li><a href="/locatie/LocatieLijstGebruiker">Locaties</a></li>
