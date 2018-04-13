@@ -11,14 +11,15 @@
 <div class="container">
     <h1 class="title">Locatie wijzigen</h1>
     <hr>
-    <form class="form-horizontal" action="/locatie/update" method="PUT">
+    <form action="{{ route('locatie.update', $locatie->id) }}"  method="post">
 
         {{ csrf_field() }}
+        {{ method_field('PUT') }}
 
         <div class=form-group>
             <label for="Naam" class="col-sm-2 control-label">Naam</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="Naam" name="Naam" value="{{ $naam }}">
+                <input type="text" class="form-control" id="Naam" name="Naam" value="{{ $locatie->naam }}">
             </div>
         </div>
         <div class="form-group">

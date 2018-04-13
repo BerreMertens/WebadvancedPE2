@@ -23,7 +23,7 @@ Route::get('locatie', 'LocatieController@index');
 Route::get('locatie/LocatieLijstGebruiker', 'LocatieController@indexGebruiker');
 Route::get('locatie/NieuweLocatieAanmaken', 'LocatieController@createNewLocation');
 Route::get('locatie/{id}', 'LocatieController@showLocation');
-Route::put('locatie/update', 'LocatieController@update');
+Route::name('locatie.update')->put('locatie/{id}', 'LocatieController@update');
 Route::post('locatie/create', 'LocatieController@create');
 Route::name('locatie.delete')->delete('locatie/{id}', 'LocatieController@delete');
 
