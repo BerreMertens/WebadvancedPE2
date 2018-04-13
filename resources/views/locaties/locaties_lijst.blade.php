@@ -51,7 +51,7 @@
 
         <div class="text-center">
             <h1 class="">access denied!</h1>
-            <video controls src="/videos/stop3.mp4"></video>
+            <video class="glyphicon-hd-video" src="/videos/stop3.mp4" loop autoplay></video>
 
 
        
