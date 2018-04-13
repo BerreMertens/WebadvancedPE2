@@ -20,7 +20,13 @@
 
         <div class=form-group>
             <div class="col-sm-10">
-                <h3>{{ $antwoord->naam }}</h3>
+
+                @foreach($locaties as $locatie)
+                    @if($antwoord->locatieId==$locatie->id)
+                        <h3>{{ $locatie->naam}}</h3>
+                    @endif
+                    @endforeach
+
             </div>
         </div>
         <div class=form-group>

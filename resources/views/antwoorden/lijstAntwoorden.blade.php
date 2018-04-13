@@ -15,9 +15,22 @@
     <hr>
     <ul>
         <table>
+
             @foreach ($antwoorden as $antwoord)
 
                 <tr>
+                    @foreach($locaties as $locatie)
+                    @if($antwoord->locatieId == $locatie->id )
+
+                        <th>{{$locatie->naam}}</th>
+
+                        @endif
+                    @endforeach
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+
                     <th>{{ $antwoord->score }}</th>
                     <th></th>
                     <th></th>

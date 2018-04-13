@@ -17,10 +17,15 @@ class CreateAntwoordenTabel extends Migration
             $table->increments('id');
             $table->integer('score');
             $table->string('commentaar', 500);
-            $table->integer('locatieId');
+            $table->unsignedInteger('locatieId');
+            $table->foreign('locatieId')->references('id')->on('locaties');
+            $table->string('token', 100);
             $table->timestamps();
         });
+
     }
+
+
 
     /**
      * Reverse the migrations.

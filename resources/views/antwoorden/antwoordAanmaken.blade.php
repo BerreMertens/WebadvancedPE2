@@ -10,6 +10,14 @@
 
 <body>
 @include('menu')
+<?php
+
+if(isset($_COOKIE['token2'])){
+    echo 'cookie wel';
+}else{
+    echo 'cookie nie';
+};
+?>
 <div class="container">
     <h1 class="title">Antwoord toevoegen</h1>
     <hr>
@@ -36,7 +44,8 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary">Antwoord toevoegen</>
+                <button type="submit" class="btn btn-primary">Antwoord toevoegen</
+                >
             </div>
         </div>
         <div class="form-group">
@@ -46,6 +55,7 @@
         </div>
 
     </form>
+
 </div>
 @include('footer')
 </body>
