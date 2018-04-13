@@ -4,56 +4,54 @@
 <head>
     <meta charset="UTF-8">
 
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="{{ asset('css/opmaak.css') }}" rel="stylesheet">
     <title>Look at me Login</title>
 
 
 </head>
 <body>
-<header>
 
-    <h1>Log in</h1>
 
-</header>
+
+
+
 @include('menu')
-<div class="content">
 
-    <div class="row">
+    <h1 class="text-center">Log in</h1>
 
-        <div class="column" id="columnLeft">
+<div class="container">
 
+    <form  action="/Login" method="POST">
+        {{ csrf_field() }}
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+            </div>
         </div>
-        <div class="column">
-            <form class="form-horizontal" action="/Login" method="POST">
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
 
-                {{ csrf_field() }}
-                <div class=form-group>
-                    <label for="email" class="col-sm-2 control-label">email</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="email" name="email" placeholder="dikkezeikmuil@gmail.com" required>
-                    </div>
-                    <label for="password" class="col-sm-2 control-label">password</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="password" name="password" placeholder="**************" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn ">inloggen</button>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="">
-                        <a href="/home">Terug naar home</a>
-                    </div>
-                </div>
-
-            </form>
+            </div>
         </div>
-        <div class="column" id="columnRight">
-
-        </div>
-
+            <div class="text-center">
+                <button type="submit" class="btn btn-default">Submit</button>
+                <br>
+                <br>
+            </div>
+        @if ($error = $errors->first('password'))
+            <div class="alert alert-danger">
+                {{ $error }}
+            </div>
+        @endif
+    </form>
+    <div class="text-center">
+        <a href="/home">Terug naar home</a>
     </div>
 </div>
 @include('footer')

@@ -51,7 +51,7 @@ class HomeController extends Controller
             } else {
 
                 // validation not successful, send back to form
-                return Redirect::to('/Login');
+                return Redirect::to('Login');
 
 
             }

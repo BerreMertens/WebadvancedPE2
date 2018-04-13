@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title></title>
 
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="{{ asset('css/opmaak.css') }}" rel="stylesheet">
 </head>
 <body>
 @include('menu')
 <div class="container">
+    @if(Auth::check())
     <h1 class="title">Lijst van alle locaties</h1>
     <a href="/locatie/NieuweLocatieAanmaken">Nieuwe locatie aanmaken</a>
     <hr>
@@ -44,7 +46,18 @@
             @endforeach
         </table>
     </ul>
+    @else
+
+
+        <div class="text-center">
+            <h1 class="">access denied!</h1>
+            <img class="text-center" src="/images/stop2.svg">
+        </div>
+
+
+    @endif
 </div>
+
 @include('footer')
 </body>
 </html>

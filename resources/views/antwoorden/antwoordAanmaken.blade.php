@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Antwoord toevoegen</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="{{ asset('css/opmaak.css') }}" rel="stylesheet">
 </head>
 
 <body>

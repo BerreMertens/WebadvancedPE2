@@ -1,3 +1,5 @@
-<div class="footer">
+<footer class="text-center footer">
+    <br>
     <p>All rights reserved Copyright © 2018 by Barry enterprise</p>
-</div>
+    <p>Team onbekwaam</p>
+</footer>
