@@ -16,9 +16,9 @@ class AntwoordController extends Controller
     {
         $locatie = locatie::find($id);
 
-        Cookie::queue(Cookie::make('token2', \Illuminate\Support\Str::random(99),time()+60*60*24*365));
+      /*  cookie::queue(cookie::make('token2', \Illuminate\Support\Str::random(99),time()+60*60*24*365));*/
 
-        return view('antwoorden.antwoordAanmaken', compact('locatie'));
+        return response()->view('antwoorden.antwoordAanmaken', compact('locatie'))->withCookie(Cookie::forever('token2',\Illuminate\Support\Str::random(99)));
     }
 
     public function create($id)
@@ -30,10 +30,10 @@ class AntwoordController extends Controller
         $antwoord -> score = request('Score');
         $antwoord -> commentaar = request('Commentaar');
         $antwoord -> locatieId = $id;
-        $antwoord -> token = request('token2');
+        $antwoord -> token = cookie::get('token2');
         $antwoord -> save();
 
-        return response('succes.antwoordToegevoegd');
+        return view('succes.antwoordToegevoegd');
 
     }
 
@@ -49,7 +49,7 @@ class AntwoordController extends Controller
     public function showMyAnswers(){
         //hier vraag ik ze even allemaal op
 
-        $antwoorden = antwoord::where('token',$_COOKIE['token2']);
+        $antwoorden = antwoord::where('token', cookie::get('token2'));
         $locaties = locatie::all();
         return view('antwoorden.lijstAntwoorden', compact('antwoorden','locaties'));
     }
