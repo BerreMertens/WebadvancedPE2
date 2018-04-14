@@ -7,11 +7,18 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 
 class HomeController extends Controller
 {
     public function index(){
-        return view('home');
+        if(cookie::get('token3')){
+            $cookie=Cookie::forever('token3',\Illuminate\Support\Str::random(10));
+        }else{
+            $cookie=Cookie::forever('token3',cookie::get('token3'));
+        }
+
+        return response()->view('home')->withCookie($cookie);
     }
     public function showLogin(){
         return View('Login');

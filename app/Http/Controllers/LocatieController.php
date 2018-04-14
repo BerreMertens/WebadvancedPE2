@@ -31,8 +31,8 @@ class LocatieController extends Controller
 
     public function showLocation($id)
     {
-        $locatie = locatie::find($id);
 
+        $locatie = locatie::find($id);
         return view('locaties.showLocatie', compact('locatie'));
     }
 

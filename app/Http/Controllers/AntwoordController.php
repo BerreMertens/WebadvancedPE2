@@ -15,22 +15,16 @@ class AntwoordController extends Controller
     public function showLocationToAddAnswer($id)
     {
         $locatie = locatie::find($id);
-
-      /*  cookie::queue(cookie::make('token2', \Illuminate\Support\Str::random(99),time()+60*60*24*365));*/
-
-        return response()->view('antwoorden.antwoordAanmaken', compact('locatie'))->withCookie(Cookie::forever('token2',\Illuminate\Support\Str::random(99)));
+        return view('antwoorden.antwoordAanmaken', compact('locatie'));
     }
 
     public function create($id)
     {
-
-
-
         $antwoord = new Antwoord();
         $antwoord -> score = request('Score');
         $antwoord -> commentaar = request('Commentaar');
         $antwoord -> locatieId = $id;
-        $antwoord -> token = cookie::get('token2');
+        $antwoord -> token = Cookie::get('token3');
         $antwoord -> save();
 
         return view('succes.antwoordToegevoegd');
@@ -49,9 +43,10 @@ class AntwoordController extends Controller
     public function showMyAnswers(){
         //hier vraag ik ze even allemaal op
 
-        $antwoorden = antwoord::where('token', cookie::get('token2'));
+        $antwoorden = antwoord::all();
+        $token =cookie::get('token3');
         $locaties = locatie::all();
-        return view('antwoorden.lijstAntwoorden', compact('antwoorden','locaties'));
+        return view('antwoorden.lijstAntwoorden', compact('antwoorden','locaties','token'));
     }
 
     public function showAnswer($id){

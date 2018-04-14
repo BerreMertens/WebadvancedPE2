@@ -10,14 +10,9 @@
 
 <body>
 @include('menu')
-<?php
 
-if(isset($_COOKIE['token2'])){
-    echo 'cookie wel';
-}else{
-    echo 'cookie nie';
-};
-?>
+
+
 <div class="container">
     <h1 class="title">Antwoord toevoegen</h1>
     <hr>

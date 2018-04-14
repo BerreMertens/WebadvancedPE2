@@ -9,15 +9,7 @@
 <body>
 @include('menu')
 <div class="container">
-<?php
 
-    setcookie('token2', \Illuminate\Support\Str::random(99), time()+60*60*24*365);
-        if(isset($_COOKIE['token2'])){
-            echo 'cookie wel';
-        }else{
-            echo 'cookie nie';
-        };
-        ?>
     <div class="row">
         <div class="col-sm-4">
 

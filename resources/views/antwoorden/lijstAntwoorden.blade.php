@@ -20,7 +20,7 @@
 
                 <tr>
                     @foreach($locaties as $locatie)
-                    @if($antwoord->locatieId == $locatie->id )
+                    @if($antwoord->locatieId == $locatie->id && $antwoord->token == $token)
 
                         <th>{{$locatie->naam}}</th>
 
