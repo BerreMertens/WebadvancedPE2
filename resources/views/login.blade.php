@@ -40,7 +40,7 @@
             </div>
         </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default">Login</button>
                 <br>
                 <br>
             </div>

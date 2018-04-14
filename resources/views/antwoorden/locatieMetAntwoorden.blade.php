@@ -8,17 +8,17 @@
 </head>
 <body>
 @include('menu')
-<div class="container">
+<div class="container text-center">
     <h1 class="title">Details {{ $locatie->naam }}</h1>
     <hr>
-    <table>
+    <table class="table table-hover">
         <tr>
-            <th><h5>Score</h5></th>
+            <th><h3>Score</h3></th>
             <th></th>
             <th></th>
             <th></th>
             <th></th>
-            <th><h5>Commentaar</h5></th>
+            <th><h3>Commentaar</h3></th>
             <th></th>
             <th></th>
             <th></th>
@@ -42,17 +42,18 @@
                     <form action="{{ route('antwoord.delete', $antwoord->id) }}"  method="post">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
-                        <button type="submit">Verwijderen</button>
+                        <button type="submit" class="btn btn-default">Verwijderen</button>
                     </form>
                 </th>
             </tr>
 
         @endforeach
-        <tr>
-            <a href="/locatie">Terug naar overzicht</a>
-        </tr>
-    </table>
 
+
+    </table>
+    <div class="text-center">
+        <a href="/locatie">Terug naar overzicht</a>
+    </div>
 </div>
 
 </body>

@@ -9,8 +9,12 @@
 <body>
 @include('menu')
 <div  style="margin: 15%; margin-left: 35%" class="container">
-    <h1>Locatie werd verwijderd!</h1>
-    <a href="/locatie">Terug naar overzicht</a>
+    <div class="text-center">
+        <h1>Locatie werd verwijderd!</h1>
+    </div>
+    <div class="text-center">
+        <a href="/locatie/LocatieLijstGebruiker">Terug naar overzicht</a>
+    </div>
 </div>
 @include('footer')
 </body>
