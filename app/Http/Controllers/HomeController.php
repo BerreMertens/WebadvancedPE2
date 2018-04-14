@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Cookie;
 class HomeController extends Controller
 {
     public function index(){
-        if(cookie::get('token3')){
+        if(cookie::get('token3')==null){
             $cookie=Cookie::forever('token3',\Illuminate\Support\Str::random(10));
         }else{
             $cookie=Cookie::forever('token3',cookie::get('token3'));

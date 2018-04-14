@@ -44,8 +44,8 @@ class AntwoordController extends Controller
         //hier vraag ik ze even allemaal op
 
         $antwoorden = antwoord::all();
-        $token =cookie::get('token3');
-        $locaties = locatie::all();
+        $token =Cookie::get('token3');
+        $locaties = Locatie::all();
         return view('antwoorden.lijstAntwoorden', compact('antwoorden','locaties','token'));
     }
 
