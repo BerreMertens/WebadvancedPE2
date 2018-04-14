@@ -15,16 +15,7 @@
 
     @include('menu')
 
-    <?php
-   /* if(empty( \Illuminate\Support\Facades\Cookie::get('token'))){*/
-
-        /*\Illuminate\Support\Facades\Cookie::queue('token', Illuminate\Support\Str::random(99), time() + (10 * 365 * 24 * 60 * 60));*/
-    if(isset($_COOKIE['token2'])){
-        echo 'cookie wel';
-    }else{
-        echo 'cookie nie';
-    };
-    ?>
+   
     <div class="container">
 
         <h1 class="text-center">Team onbekwaam</h1>
