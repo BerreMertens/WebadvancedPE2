@@ -15,11 +15,11 @@
 
         </div>
         <div class="col-sm-4">
-            <h1 class="title">Lijst van alle locaties</h1>
+            <h1 class="text-center">Lijst van alle locaties</h1>
             <hr>
             <ul>
-                <div class="table-responsive">
-                    <table class="table-hover table-bordered">
+                <div class="text-center">
+                    <table class="table table-hover">
                         @foreach ($locaties as $locatie)
 
                             <tr>
@@ -35,9 +35,7 @@
                 </div>
             </ul>
         </div>
-        <div class="col-sm-4">
 
-        </div>
     </div>
 
 </div>

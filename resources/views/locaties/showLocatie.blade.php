@@ -9,29 +9,34 @@
 <body>
 @include('menu')
 <div class="container">
-    <h1 class="title">Locatie wijzigen</h1>
+    <div class="text-center">
+        <h1 class="title">Locatie wijzigen</h1>
+    </div>
     <hr>
+
     <form action="{{ route('locatie.update', $locatie->id) }}"  method="post">
 
         {{ csrf_field() }}
         {{ method_field('PUT') }}
 
         <div class=form-group>
-            <label for="Naam" class="col-sm-2 control-label">Naam</label>
-            <div class="col-sm-10">
+            <label for="Naam">Naam:</label>
+            <div class="col-sm-10 input-group">
                 <input type="text" class="form-control" id="Naam" name="Naam" value="{{ $locatie->naam }}">
             </div>
         </div>
         <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary">Locatie wijzigen</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-default">Locatie wijzigen</button>
             </div>
         </div>
         <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
+            <div class="text-center">
                 <a href="/locatie">Terug naar overzicht</a>
             </div>
         </div>
+    </form>
+
 </div>
 @include('footer')
 </body>

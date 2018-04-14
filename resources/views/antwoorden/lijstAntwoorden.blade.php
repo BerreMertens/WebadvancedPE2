@@ -9,15 +9,32 @@
 </head>
 <body>
 @include('menu')
-<div class="container">
+<div class="container text-center">
+        <h1 class="title">Lijst van al mijn antwoorden</h1>
 
-    <h1 class="title">Lijst van al mijn antwoorden</h1>
     <hr>
     <ul>
-        <table>
+        <table class=" table table-hover">
 
             @foreach ($antwoorden as $antwoord)
-
+                <tr>
+                    <th><h3>Locatie</h3></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><h3>Score</h3></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><h3>Commentaar</h3></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
                 <tr>
                     @foreach($locaties as $locatie)
                     @if($antwoord->locatieId == $locatie->id && $antwoord->token == $token)
@@ -50,7 +67,7 @@
                         <form action="{{ route('antwoord.delete', $antwoord->id) }}" method="post">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button type="submit">Verwijderen</button>
+                            <button type="submit" class=" btn btn-default">Verwijderen</button>
                         </form>
                     </th>
                 </tr>
