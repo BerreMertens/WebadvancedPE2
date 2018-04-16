@@ -13,7 +13,7 @@
         <h1>Locatie werd verwijderd!</h1>
     </div>
     <div class="text-center">
-        <a href="/locatie/LocatieLijstGebruiker">Terug naar overzicht</a>
+        <a href="/locatie">Terug naar overzicht</a>
     </div>
 </div>
 @include('footer')
