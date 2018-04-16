@@ -13,7 +13,7 @@
         <h1>Antwoord werd gewijzigd!</h1>
     </div>
     <div class="text-center">
-        <a href="/locatie/LocatieLijstGebruiker">Terug naar overzicht</a>
+        <a href="/antwoord/lijstAntwoorden">Terug naar overzicht</a>
     </div>
 </div>
 @include('footer')
