@@ -15,7 +15,7 @@
 
     @include('menu')
 
-   
+
     <div class="container">
 
         <h1 class="text-center">Team onbekwaam</h1>
