@@ -8,7 +8,7 @@
 </head>
 <body>
 @include('menu')
-<div  style="margin: 15%; margin-left: 35%" class="container">
+<div  class="container">
     <div class="text-center">
         <h1>Locatie werd verwijderd!</h1>
     </div>
