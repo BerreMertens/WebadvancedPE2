@@ -8,12 +8,12 @@
 </head>
 <body>
 @include('menu')
-<div  style="margin: 15%; margin-left: 35%" class="container">
+<div class="container">
     <div class="text-center">
         <h1>Antwoord werd gewijzigd!</h1>
     </div>
     <div class="text-center">
-        <a href="/locatie/LocatieLijstGebruiker">Terug naar overzicht</a>
+        <a href="/antwoord/lijstAntwoorden">Terug naar overzicht</a>
     </div>
 </div>
 @include('footer')

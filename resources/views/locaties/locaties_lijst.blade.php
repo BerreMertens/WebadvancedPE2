@@ -29,6 +29,14 @@
 
                     <th><a href="/locatie/locatieDetails/{{$locatie->id}}">Antwoorden Bekijken</a></th>
 
+                    <th>
+                        <form action="{{ route('locatie.delete', $locatie->id) }}"  method="post">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button type="submit" class="btn btn-default">Verwijderen</button>
+                        </form>
+                    </th>
+
 
                 </tr>
 
@@ -38,13 +46,7 @@
         </table>
         </div>
     </ul>
-        <div class="text-center">
-            <form action="{{ route('locatie.delete', $locatie->id) }}"  method="post">
-                {{ csrf_field() }}
-                {{ method_field('DELETE') }}
-                <button type="submit" class="btn btn-default">Verwijderen</button>
-            </form>
-        </div>
+        
 
     @else
 

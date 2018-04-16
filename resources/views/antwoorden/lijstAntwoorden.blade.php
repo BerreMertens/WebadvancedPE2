@@ -16,7 +16,7 @@
     <ul>
         <table class=" table table-hover">
 
-            @foreach ($antwoorden as $antwoord)
+
                 <tr>
                     <th><h3>Locatie</h3></th>
                     <th></th>
@@ -35,6 +35,7 @@
                     <th></th>
                     <th></th>
                 </tr>
+            @foreach ($antwoorden as $antwoord)
                 <tr>
                     @foreach($locaties as $locatie)
                     @if($antwoord->locatieId == $locatie->id && $antwoord->token == $token)

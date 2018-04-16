@@ -32,13 +32,13 @@
         <div class=form-group>
             <label for="Score">Score op 10:</label>
             <div class="col-sm-10 input-group">
-                <input type="number" min="1" max="10" class="form-control" id="Score" name="Score" required>
+                <input type="number" min="1" max="10" class="form-control" id="Score" name="Score" value="{{ $antwoord->score }}" required>
             </div>
         </div>
         <div class=form-group>
             <label for="Commentaar">Commentaar:</label>
             <div class="col-sm-10 input-group">
-                <input type="text" maxlength="500" class="form-control" id="Commentaar" name="Commentaar" required>
+                <input type="text" maxlength="500" class="form-control" id="Commentaar" name="Commentaar" value="{{ $antwoord->commentaar }}" required>
             </div>
         </div>
         <div class="form-group">
