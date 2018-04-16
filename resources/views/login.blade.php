@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="{{ asset('css/opmaak.css') }}" rel="stylesheet">
-    <title>Look at me Login</title>
+    <title>WebadvancedPE</title>
 
 
 </head>
